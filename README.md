@@ -1,7 +1,7 @@
 # performance-analysis
 Front-end performance analysis with Sitespeed.io.
 
-## Connectivity profiles (upload / download / RTT)
+### Connectivity profiles (upload / download / RTT)
 
 The table below lists the built-in profiles that **Sitespeed.io / Browsertime** exposes through `--connectivity.profile`. Bandwidth values are expressed in **kbit/s** (upload and download) and round trip time in **ms**.
 
@@ -27,13 +27,13 @@ According to OSIPTEL’s national monitoring panel, 4G remains the most used mob
 
 ### Running a test
 
-1. Install Sitespeed.io globally if you have not already done so:
+1. Install the dependencies (one-time setup):
+   ```bash
+   npm install
    ```
-   npm install -g sitespeed.io
-   ```
-2. Execute a run with the project configuration:
-   ```
-   sitespeed.io --config ./config.json "<url-here>"
+2. Execute a run with the project configuration using the npm script:
+   ```bash
+   npm run perf -- "<url-here>"
    ```
 3. Review the HTML report output under `./sitespeed-result/` (a timestamped folder is created per run).
 
