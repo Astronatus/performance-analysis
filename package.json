@@ -1,0 +1,12 @@
+{
+  "name": "performance-analysis",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Front-end performance analysis tooling powered by Sitespeed.io.",
+  "scripts": {
+    "perf": "sitespeed.io --config ./config.json"
+  },
+  "devDependencies": {
+    "sitespeed.io": "^32.0.0"
+  }
+}
