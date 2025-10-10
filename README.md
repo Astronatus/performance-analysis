@@ -25,8 +25,14 @@ According to OSIPTEL’s national monitoring panel, 4G remains the most used mob
 
 *Source: Panel de Monitoreo de Internet Móvil, consolidated report for July 2025 (page 15).* [PDF](https://sociedadtelecom.pe/wp-content/uploads/2025/08/Panel_de_Monitoreo_Internet_Movil_Consolidado_Julio_2025.pdf)
 
-### Test execution
+### Running a test
 
-```
-sitespeed.io --config ./config.json "<url-here>"
-```
+1. Install Sitespeed.io globally if you have not already done so:
+   ```
+   npm install -g sitespeed.io
+   ```
+2. Execute a run with the project configuration:
+   ```
+   sitespeed.io --config ./config.json "<url-here>"
+   ```
+3. Review the HTML report output under `./sitespeed-result/` (a timestamped folder is created per run).
