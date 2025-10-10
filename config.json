@@ -3,10 +3,6 @@
     "add": "analysisstorer"
   },
   "utc": true,
-  "connectivity": {
-    "engine": "throttle",
-    "profile": "4g"
-  },
   "browsertime": {
     "browser": "chrome",
     "iterations": 3,
@@ -31,9 +27,15 @@
         }
       },
       "args": [
+        "--window-size=390,844",
         "--force-device-scale-factor=3",
         "--no-first-run"
-      ]
+      ],
+      "CPUThrottlingRate": 2
+    },
+    "connectivity": {
+      "engine": "throttle",
+      "profile": "4g"
     }
   }
 }
