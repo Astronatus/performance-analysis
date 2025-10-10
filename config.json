@@ -1,27 +1,39 @@
 {
-    "output": ["html", "json"],
-    "browsertime": {
-        "browser": "chrome",
-        "iterations": 3,
-        "video": true,
-        "visualMetrics": true,
-        "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15A5341f Safari/604.1",
-        "chrome": {
-            "mobileEmulation": {
-                "deviceMetrics": {
-                    "width": 390,
-                    "height": 844,
-                    "pixelRatio": 1
-                }
-            },
-            "args": [
-                "--enable-features=NetworkService,NetworkServiceInProcess",
-                "--disable-web-security"
-            ]
-        },
-        "connectivity": {
-            "engine": "throttle",
-            "profile": "3g"
+  "mobile": true,
+  "plugins": {
+    "add": "analysisstorer"
+  },
+  "utc": true,
+  "connectivity": {
+    "engine": "throttle",
+    "profile": "4g"
+  },
+  "browsertime": {
+    "browser": "chrome",
+    "iterations": 3,
+    "video": false,
+    "visualMetrics": false,
+    "screenshot": true,
+    "screenshotParams": {
+      "type": "png",
+      "png": {
+        "compressionLevel": 6
+      }
+    },
+    "viewPort": "390x844",
+    "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15A5341f Safari/604.1",
+    "chrome": {
+      "mobileEmulation": {
+        "deviceMetrics": {
+          "width": 390,
+          "height": 844,
+          "pixelRatio": 3
         }
+      },
+      "args": [
+        "--force-device-scale-factor=3",
+        "--no-first-run"
+      ]
     }
+  }
 }
