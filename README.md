@@ -38,3 +38,6 @@ According to OSIPTEL’s national monitoring panel, 4G remains the most used mob
 3. Review the HTML report output under `./sitespeed-result/` (a timestamped folder is created per run).
 
 **Important:** The `throttle` connectivity engine tweaks your system network rules to emulate slow links and those changes persist until you remove them. After you finish your tests, run `sudo throttle --stop` to restore your normal bandwidth (otherwise all your apps will keep using the throttled profile). You can check whether throttling is still active with `sudo throttle --status`.
+
+
+4. Demo
