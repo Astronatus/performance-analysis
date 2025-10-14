@@ -35,7 +35,10 @@
     },
     "connectivity": {
       "engine": "throttle",
-      "profile": "4g"
+      "profile": "custom",
+      "down": 12000,
+      "up": 12000,
+      "rtt": 85
     }
   }
 }
