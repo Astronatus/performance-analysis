@@ -2,11 +2,18 @@
   "name": "performance-analysis",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "description": "Front-end performance analysis tooling powered by Sitespeed.io.",
   "scripts": {
-    "perf": "sitespeed.io --config ./config.json"
+    "perf": "sitespeed.io --config ./config.json urls.txt",
+    "perf:docker:mvp": "docker run --rm -v \"$(pwd):/sitespeed.io\" sitespeedio/sitespeed.io:38.4.1 --config ./config.json urls.txt",
+    "network:start": "sudo ./node_modules/.bin/throttle --down 12000 --up 12000 --rtt 85",
+    "network:stop": "sudo ./node_modules/.bin/throttle --down 12000 --up 12000 --rtt 85",
+    "perf:docker": "docker run --rm -v \"$PWD:/sitespeed.io\" sitespeedio/sitespeed.io:38.4.1 --config ./config.json urls.txt",
+    "performance": "bash -c 'set -e; trap \"npm run -s network:stop\" EXIT; npm run -s network:start; npm run -s perf:docker'"
   },
   "devDependencies": {
-    "sitespeed.io": "^32.0.0"
+    "@sitespeed.io/throttle": "^5.0.1",
+    "sitespeed.io": "^38.4.0"
   }
 }
