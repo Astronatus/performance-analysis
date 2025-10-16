@@ -7,8 +7,9 @@
   "scripts": {
     "perf": "sitespeed.io --config ./config.json urls.txt",
     "perf:docker:mvp": "docker run --rm -v \"$(pwd):/sitespeed.io\" sitespeedio/sitespeed.io:38.4.1 --config ./config.json urls.txt",
-    "network:start": "sudo ./node_modules/.bin/throttle --down 12000 --up 12000 --rtt 85",
-    "network:stop": "sudo ./node_modules/.bin/throttle --down 12000 --up 12000 --rtt 85",
+    "force:stop": "sudo throttle --stop",
+    "network:start": "sudo throttle --down 12000 --up 12000 --rtt 85",
+    "network:stop": "sudo throttle --down 12000 --up 12000 --rtt 85",
     "perf:docker": "docker run --rm -v \"$PWD:/sitespeed.io\" sitespeedio/sitespeed.io:38.4.1 --config ./config.json urls.txt",
     "performance": "bash -c 'set -e; trap \"npm run -s network:stop\" EXIT; npm run -s network:start; npm run -s perf:docker'"
   },

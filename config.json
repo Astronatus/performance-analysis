@@ -5,9 +5,9 @@
   "utc": true,
   "browsertime": {
     "browser": "chrome",
-    "iterations": 1,
+    "iterations": 3,
     "video": true,
-    "visualMetrics": false,
+    "visualMetrics": true,
     "screenshot": true,
     "screenshotParams": {
       "type": "png",
@@ -15,13 +15,10 @@
         "compressionLevel": 6
       }
     },
-    "viewPort": "360x740",
     "userAgent": "Mozilla/5.0 (Linux; Android 14; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.6167.164 Mobile Safari/537.36",
     "chrome": {
       "mobileEmulation": {
-        "width": 360,
-        "height": 740,
-        "pixelRatio": 1
+        "deviceName": "Moto G4"
       },
       "args": [
         "--window-position=0,0",
@@ -32,11 +29,8 @@
       "CPUThrottlingRate": 2
     },
     "connectivity": {
-      "engine": "throttle",
-      "profile": "custom",
-      "down": 12000,
-      "up": 12000,
-      "rtt": 85
+      "engine": "external",
+      "profile": "custom"
     }
   }
 }
