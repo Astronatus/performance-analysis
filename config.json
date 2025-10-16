@@ -15,15 +15,13 @@
         "compressionLevel": 6
       }
     },
-    "userAgent": "Mozilla/5.0 (Linux; Android 14; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.6167.164 Mobile Safari/537.36",
+    "viewPort": "360x640",
     "chrome": {
       "mobileEmulation": {
         "deviceName": "Moto G4"
       },
       "args": [
         "--window-position=0,0",
-        "--force-device-scale-factor=1",
-        "--high-dpi-support=1",
         "--no-first-run"
       ],
       "CPUThrottlingRate": 2
