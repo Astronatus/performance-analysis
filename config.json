@@ -1,8 +1,9 @@
 {
+  "preScript": "prelocalstorage.cjs",
   "plugins": {
     "add": "analysisstorer"
   },
-  "utc": true,
+  "utc": false,
   "browsertime": {
     "browser": "chrome",
     "iterations": 3,
